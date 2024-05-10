@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <!--Informações para instalação do serviço-->
+  <servico>
+    <sdescr>Classificação de XML NDD</sdescr>
+    <snome>LKM NDD Class - QAS</snome>
+    <snomeint>lkm_nddclass_qas</snomeint>
+    <stempo>1</stempo>
+    <sdebug></sdebug>
+  </servico>
+  <!--Diretórios de origem e destino-->
+  <diretorio>
+    <dirxml01>C:\temp\NDD\XmlEnt1</dirxml01>
+    <dirxml02>C:\temp\NDD\XmlEnt2</dirxml02>
+    <dirxml03>C:\temp\NDD\XmlEnt3</dirxml03>
+    <dirxml04>C:\temp\NDD\XmlEnt4</dirxml04>
+    <dirdest>C:\temp\NDD\XmlCli</dirdest>
+    <dirnclass>C:\temp\NDD\XmlNClass</dirnclass>
+  </diretorio>
+  <!--Relação de tags para localização de CNPJ e E-mail-->
+  <tagsxml>
+    <tagcnpj01>nfse-tomador-cpfcnpjtomador</tagcnpj01>
+    <tagemail01>nfse-tomador-cpfcnpjtomador</tagemail01>
+  </tagsxml>
+  <!--Parametrização dos ambiente SAP (por ambiente QAS e PRD)-->
+  <ambiente>
+    <ambqas>DEV-100</ambqas>
+    <ambprd>LK2-200</ambprd>
+  </ambiente>
+  <!--Configuração do ambiente SAP QAS-->
+  <sapconf ambiente="DEV-100">
+    <sapphost>192.168.197.24</sapphost>
+    <ssysid>DEV</ssysid>
+    <ssystemnumber>00</ssystemnumber>
+    <sclient>100</sclient>
+    <sapprouter>/H/179.99.210.60</sapprouter>
+    <suser>rmartins</suser>
+    <spass>Senha01!</spass>
+    <slanguage>PT</slanguage>
+    <spoolsize>5</spoolsize>
+    <speakconnection>10</speakconnection>
+    <stimeout>600</stimeout>
+  </sapconf>
+  <!--Configuração do ambiente SAP PRD-->
+  <sapconf ambiente="LK2-200">
+    <sapphost>192.168.197.32</sapphost>
+    <ssysid>LK2</ssysid>
+    <ssystemnumber>00</ssystemnumber>
+    <sclient>200</sclient>
+    <sapprouter>/H/179.99.210.60</sapprouter>
+    <suser>lkmndd</suser>
+    <spass>Lkm@Ndd1</spass>
+    <slanguage>PT</slanguage>
+    <spoolsize>5</spoolsize>
+    <speakconnection>10</speakconnection>
+    <stimeout>600</stimeout>
+  </sapconf>
+  <!--Função de execução no SAP-->
+  <sapproc>
+    <sfunproc>/LKMTLIC/LICN_FORN_READ</sfunproc>
+    <stempoexec>5</stempoexec>
+  </sapproc>
+  <!--Tempo para renovação das informações de licenciamento - em minutos-->
+  <licinfo>
+    <tempolic>5</tempolic>
+  </licinfo>
+</config>

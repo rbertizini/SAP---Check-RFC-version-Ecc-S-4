@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <!--Parametrização dos ambiente SAP (por ambiente QAS e PRD)-->
+  <ambiente>
+    <ambecc>LK2-200</ambecc>
+    <ambs-4>LH1-100</ambs-4>
+  </ambiente>
+  <!--Configuração do ambiente SAP ECC-->
+  <sapconf ambiente="LK2-200">
+    <sapphost>192.168.197.32</sapphost>
+    <ssysid>LK2</ssysid>
+    <ssystemnumber>00</ssystemnumber>
+    <sclient>200</sclient>
+    <sapprouter>/H/179.99.210.60</sapprouter>
+    <suser>lkmndd</suser>
+    <spass>Lkm@Ndd1</spass>
+    <slanguage>PT</slanguage>
+    <spoolsize>5</spoolsize>
+    <speakconnection>10</speakconnection>
+    <stimeout>600</stimeout>
+  </sapconf>
+  <!--Configuração do ambiente SAP S/4-->
+  <sapconf ambiente="LH1-100">
+    <sapphost>192.168.197.41</sapphost>
+    <ssysid>LH1</ssysid>
+    <ssystemnumber>00</ssystemnumber>
+    <sclient>100</sclient>
+    <sapprouter>/H/179.99.210.60</sapprouter>
+    <suser>rmartins</suser>
+    <spass>Senha01!</spass>
+    <slanguage>PT</slanguage>
+    <spoolsize>5</spoolsize>
+    <speakconnection>10</speakconnection>
+    <stimeout>600</stimeout>
+  </sapconf>
+  <!--Função de execução no SAP-->
+  <sapproc>
+    <sfunproc>/LKMT/COM_TEST_JCO_SAP</sfunproc>
+    <stempoexec>5</stempoexec>
+  </sapproc>  
+</config>
